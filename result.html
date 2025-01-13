@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Data Analysis Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/result.css') }}"> 
+
+</head>
+<body>
+    <h1>Stock Data Analysis Result</h1>
+    <p><strong>Company Symbol:</strong> {{ company_symbol }}</p>
+    <p><strong>Start Date:</strong> {{ start_date }}</p>
+    <p><strong>End Date:</strong> {{ end_date }}</p>
+    <h2>Summary Statistics</h2>
+    {{ description|safe }}
+    <h2>Correlation Matrix</h2>
+    {{ correlation_matrix|safe }}
+    <h2>Stock Price Over Time</h2>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Stock Price Over Time">
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Data Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> 
+</head>
+<body>
+    <main>
+    <h1>Stock Data Analysis</h1>
+    <form method="post">
+        <label for="company_symbol">Company Symbol:</label>
+        <input type="text" id="company_symbol" name="company_symbol" placeholder="Eg: AAPL" required><br><br>
+        <label for="start_date">Start Date:</label>
+        <input type="text" id="start_date" name="start_date" placeholder="YYYY-MM-DD" required><br><br>
+        <label for="end_date">End Date:</label>
+        <input type="text" id="end_date" name="end_date" placeholder="YYYY-MM-DD" required><br><br>
+        <input type="submit" value="Fetch it">
+    </form>
+    </main>
+</body>
+</html>
